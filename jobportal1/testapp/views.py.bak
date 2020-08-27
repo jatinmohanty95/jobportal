@@ -32,7 +32,7 @@ def freshview(request):
 def homeview(request):
     appdat = ApplicantData.objects.all()
     context = {'appdat': appdat}
-    
+    print("===== Home context :: ",context)
     return render(request, 'jobportal/home.html',{'appdat':appdat,})
 
 def createjob(request):
