@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+    <h1 class="bg-primary text-white text-center" id="h11">{{ applicant.name }} Applicant Details</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card-body">
+                <form method="post">
+                    <table class="table table-bordered text-center">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>email</th>
+                            <th>mobile</th>
+                            <th>qualiication</th>
+                            <th>resume</th>
+                            <th>experience</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            {% if applicant %}
+                                {% for app in applicant %}
+                                    <tr>
+                                        <td>{{ app.name }}</td>
+                                        <td>{{ app.email }}</td>
+                                        <td>{{ app.mobile }}</td>
+                                        <td>{{ ap.qualification }}</td>
+                                        <td>{{ app.resume }}</td>
+                                        <td>{{ app.experience }}</td>
+                                    </tr>
+                                {% endfor %}
+                        {% endif %}
+                        </tbody>
+                    </table>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+</body>
+</html>

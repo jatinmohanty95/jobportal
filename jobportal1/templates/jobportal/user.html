@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>User Page</title>
+</head>
+<body>
+{% include 'jobportal/navbar.html' %}
+<br>
+{% block content %}
+{% csrf_token %}
+{#    {{ jobdescr }}#}
+    <style>
+    body{
+        background-color: lightblue;
+    }
+    </style>
+    <div class="container">
+        <div class="row">
+        <div class=" col-md-6">
+            <div class="card">
+                <div class="card-body">
+                <form>
+                    {% if jobdescr %}
+                        {% for job in jobdescr %}
+                            <h3>jobname:  {{ job.jobname|capfirst }}</h3><br>
+                            <h3>jDescription:{{ job.description|capfirst }}</h3><br>
+                            <h3>Exp:{{ job.experience }}</h3><br>
+                            <h3>Qualification:{{ job.qualification |capfirst}} </h3><br>
+                            <a class="btn btn-block btn-success" href="{% url 'applyjob' %}">Apply</a><br>
+                            <hr>
+                        {% endfor %}
+                    {% endif %}
+                </form>
+
+    </div>
+
+
+    </div>
+</div>
+</div>
+
+</div>
+
+{% endblock %}
+</body>
+</html>

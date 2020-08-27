@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+{% include 'jobportal/navbar.html' %}
+<center><h1>Ajatus Job Portal</h1>
+</center>
+{#<center>#}
+{#    {% include 'jobportal/applicant.html' %}#}
+{#</center>#}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card-body">
+                <a class="btn btn-lg btn-success" href="{% url 'home' %}"><h1>Admin</h1></a>
+            </div>
+        </div>
+        <div class="offset-md-3 col-md-6">
+            <div class="card-body">
+                   <a class="btn btn-lg btn-primary" href="{% url 'user-page' %}"><h1>User</h1></a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-md-3">#}
+{#                    <a href="{% url 'cjob' %}" class="btn btn-block btn-success"><h2>Add New Job</h2></a>#}
+{#                    </div>#}
+{#            </div>#}
+{#    </div>#}
+{#<hr>#}
+{#<div class="container">#}
+{#<div class="row">#}
+{#    <div class="col-md-8">#}
+{#        <div class="card text-white bg-dark text-center">#}
+{#            <div class="card-header">#}
+{#                <h4 class="card-title">Applicant Details</h4>#}
+{#            </div>#}
+{#            <div class="card-body">#}
+{#                <table class="table table-bordered table-sm text-center  text-white table-hovor">#}
+{#                    <thead class="bg-primary">#}
+{#                    <tr>#}
+{#                        <th>Name</th>#}
+{#                        <th>Email</th>#}
+{#                        <th>Mobile</th>#}
+{#                        <th>Qualification</th>#}
+{#                        <th>Resume</th>#}
+{#                        <th>Experience</th>#}
+{#                    </tr>#}
+{#                    </thead>#}
+{#                    <tbody class="text-dark bg-white">#}
+{#                    {% if applications %}#}
+{#                        {% for applicant in applications %}#}
+{##}
+{#                            <tr>#}
+{#                            <td>{{ applicant.name }}</td>#}
+{#                            <td>{{ applicant.Email }}</td>#}
+{#                            <td>{{ applicant.mobile}}</td>#}
+{#                            <td>{{ applicant.qualification}}</td>#}
+{#                            <td>{{ applicant.resume}}</td>#}
+{#                            <td>{{ applicant.Experience}}</td>#}
+{#                            </tr>#}
+{#                        {% endfor %}#}
+{##}
+{#                    {% endif %}#}
+{##}
+{#                    </tbody>#}
+{#                </table>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{#</div>#}
+
+{% endblock %}
+</body>
+</html>
